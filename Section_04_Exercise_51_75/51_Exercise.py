@@ -21,8 +21,8 @@ Notes:
 import re
 
 
-def find_longest(setence):
-    return max(re.split('\W', setence.lower()), key=len)
+def find_longest(sentence):
+    return max(re.split('\W', sentence.lower()), key=len)
 
 
 print(find_longest("A thing of beauty is a joy forever."))
