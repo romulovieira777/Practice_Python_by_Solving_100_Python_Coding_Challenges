@@ -5,13 +5,14 @@ Write a recursive function that will return the longest word in a sentence. In c
 return the first one.
 
 Examples:
-    find_longest("") ->
+    find_longest("I will and ever will be gratefully and perpetually loving you Tesh!") -> "perpetually"
 
-    find_longest("A thing of beauty is a joy forever.") -> forever
+    find_longest("A thing of beauty is a joy forever.") -> "forever"
 
-    find_longest("") ->
+    find_longest("Forgetfulness is by all means powerless!") -> "forgetfulness"
 
-    find_longest("") ->
+    find_longest("\"Strengths" is the longest and most commonly used word that contains only a single vowel.") ->
+    "strengths"
 
 Notes:
     - Special characters and symbols don't count as part of the word.
@@ -25,4 +26,4 @@ def find_longest(sentence):
     return max(re.split('\W', sentence.lower()), key=len)
 
 
-print(find_longest("A thing of beauty is a joy forever."))
+print(find_longest("\'Strengths' is the longest and most commonly used word that contains only a single vowel."))
